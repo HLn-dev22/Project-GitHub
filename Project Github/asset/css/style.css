@@ -61,6 +61,30 @@ div.item1 img {
     border-radius: 50% 50% 80% 50%;
 }
 
+section.presentation {
+    display: grid;
+    grid-template-columns: 200px 100px;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+    color: white;
+}
+
+section.presentation img.chris {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50% 50% 80% 50%;
+}
+
+section.presentation img {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
 footer {
     background-color: rgba(73, 5, 150, 0.664);
     color: white;
