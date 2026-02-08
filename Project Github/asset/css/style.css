@@ -53,13 +53,19 @@ div.item p {
 div.item:hover>p {
     visibility: visible;
 }
-
+div.item img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 div.item1 img {
     height: 200px;
     object-fit: contain;
     width: 200px;
     border-radius: 50% 50% 80% 50%;
 }
+
 
 section.presentation {
     display: grid;
@@ -84,7 +90,14 @@ section.presentation img {
     border-radius: 10px;
     padding: 5px;
 }
-
+section.presentation img.aime {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: none;
+}
+    
 footer {
     background-color: rgba(73, 5, 150, 0.664);
     color: white;
