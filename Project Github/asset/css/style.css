@@ -61,6 +61,14 @@ div.item1 img {
     border-radius: 50% 50% 80% 50%;
 }
 
+section.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 footer {
     background-color: rgba(73, 5, 150, 0.664);
     color: white;
