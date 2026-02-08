@@ -28,6 +28,7 @@ section.container {
     display: grid;
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
+    gap: 20px;
 }
 
 section.container div {
