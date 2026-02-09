@@ -60,6 +60,7 @@ main {
 section.initiation p {
     margin-left: 20px;
     color: rgb(73, 5, 150);
+    width: 90%;
 }
 
 section.container {
