@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    display: flex;
     text-align: center;
     background-color: rgba(73, 5, 150, 0.664);
     color: white;
@@ -33,9 +34,8 @@ header img {
     height: 50px;
     width: 50px;
     position: absolute;
-    margin-top: -42px;
-    margin-left: -16cm;
     transition: 500ms ease-in-out;
+    margin-top: -26px;
     border-radius: 50px;
 }
 
@@ -51,6 +51,7 @@ main {
     flex-direction: column;
     gap: 30px;
     border-top-left-radius: 100px;
+    margin-bottom: 20px;
 }
 
 section.initiation p {
@@ -109,15 +110,39 @@ div.item1 img {
     object-fit: contain;
     width: 200px;
     border-radius: 50% 50% 80% 50%;
-    animation: showpage 800ms ease-in-out;
+    animation: showpage 1s ease-in-out;
 }
 
 div.item2 img {
-    animation: showpage 650ms ease-in-out;
+    animation: showpage 900ms ease-in-out;
 }
 
 div.item3 img {
+    animation: showpage 800ms ease-in-out;
+}
+
+div.item4 img {
+    animation: showpage 700ms ease-in-out;
+}
+
+div.item5 img {
+    animation: showpage 600ms ease-in-out;
+}
+
+div.item6 img {
     animation: showpage 500ms ease-in-out;
+}
+
+div.item7 img {
+    animation: showpage 400ms ease-in-out;
+}
+
+div.item8 img {
+    animation: showpage 300ms ease-in-out;
+}
+
+div.item9 img {
+    animation: showpage 200ms ease-in-out;
 }
 
 section.presentation {
@@ -143,6 +168,7 @@ section.presentation img {
     background-color: white;
     border-radius: 10px;
     padding: 5px;
+    animation: showpage 1s ease-in-out;
 }
 
 div.social {
@@ -172,7 +198,8 @@ footer {
     background-color: rgba(73, 5, 150, 0.664);
     color: white;
     text-align: center;
-
+    bottom: 0;
+    padding: 10px 0;
 }
 
 @keyframes showpage {
@@ -196,5 +223,59 @@ footer {
     100% {
         opacity: 1;
         transform: translateX(0) translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        width: 100%;
+    }
+
+    body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    section.initiation p {
+        font-size: medium;
+        width: 90%;
+    }
+
+    section.container {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        justify-content: center;
+        gap: 10px;
+    }
+
+    div.item img {
+        height: 150px;
+        width: 150px;
+    }
+
+    section.presentation {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    section.presentation img.chris,
+    section.presentation img.aime {
+        width: 60%;
+        height: auto;
+        grid-row: auto;
+    }
+
+    div.contact {
+        grid-column: auto;
+        text-align: center;
+    }
+
+    div.social {
+        grid-column: auto;
+        text-align: center;
     }
 }
