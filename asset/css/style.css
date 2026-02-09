@@ -95,6 +95,7 @@ div.item p {
     padding: 5px;
     border-radius: 20px;
     transition: visibility 200ms ease-in-out;
+    animation: showpage1 1s ease-in-out;
 }
 
 div.item:hover>p {
@@ -182,8 +183,19 @@ section.presentation img {
     animation: showpage 1s ease-in-out;
 }
 
+section.presentation img.im {
+    background-color: rgb(119, 85, 173);
+}
+
 div.social {
     grid-column: 2;
+    gap: 50px;
+}
+
+section.propos {
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
 }
 
 section.presentation img.aime {
