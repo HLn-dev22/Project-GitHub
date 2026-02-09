@@ -26,6 +26,7 @@ header {
     font-weight: bold;
     padding: 10px 0;
     margin-bottom: 20px;
+    border-bottom-left-radius: 100px;
 }
 
 header h1 {
@@ -58,13 +59,14 @@ main {
 
 section.initiation p {
     margin-left: 20px;
+    color: rgb(73, 5, 150);
 }
 
 section.container {
     display: grid;
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 section.container div {
@@ -80,19 +82,22 @@ div.item a {
 }
 
 div.item p {
-    visibility: hidden;
+    visibility: visible;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
     color: white;
-    background-color: rgba(73, 5, 150, 0.664);
+    background-color: rgba(73, 5, 150, 0.89);
+    box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
+    -webkit-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
+    -moz-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     padding: 5px;
     border-radius: 20px;
-    transition: visibility 100ms ease-in-out;
+    transition: visibility 200ms ease-in-out;
 }
 
 div.item:hover>p {
-    visibility: visible;
+    visibility: hidden;
 }
 
 div.item img {
@@ -107,7 +112,7 @@ div.item img {
 }
 
 div.item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-5px);
 }
 
 div.item1 img {
@@ -205,6 +210,7 @@ footer {
     text-align: center;
     bottom: 0;
     padding: 10px 0;
+    border-top-right-radius: 100px;
 }
 
 @keyframes showpage {
@@ -239,6 +245,10 @@ footer {
     body {
         overflow-x: hidden;
         height: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
     }
 
     main {
