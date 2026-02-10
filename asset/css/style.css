@@ -94,7 +94,7 @@ div.item p {
     -webkit-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     -moz-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 0 20px;
     transition: visibility 200ms ease-in-out;
     animation: showpage1 1s ease-in-out;
 }
