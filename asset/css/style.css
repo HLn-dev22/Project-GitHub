@@ -59,7 +59,7 @@ main {
 
 section.initiation p {
     margin-left: 20px;
-    color: rgb(73, 5, 150);
+    color: rgb(148, 81, 139);
     width: 90%;
 }
 
@@ -67,6 +67,7 @@ section.container {
     display: grid;
     grid-template-columns: repeat(3, 200px);
     justify-content: center;
+    font-weight: bold;
     gap: 40px;
 }
 
