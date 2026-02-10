@@ -271,6 +271,7 @@ footer {
     }
 
     section.initiation p {
+        color: white;
         font-size: medium;
         width: 90%;
     }
