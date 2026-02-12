@@ -6,10 +6,12 @@
 
 html {
     scrollbar-width: none;
+    font-family: 'Inter', sans-serif;
+    /* ... reste de ton code ... */
 }
 
 body {
-    background-image: url("Photos.jpg");
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,8 +24,10 @@ body {
 header {
     display: flex;
     text-align: center;
-    background-color: rgba(73, 5, 150, 0.664);
-    color: white;
+    border-bottom: solid 0.5px;
+    border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
+    border-image-slice: 1;
+    color: rgba(7, 126, 90, 0.89);
     font-weight: bold;
     padding: 10px 0;
     margin-bottom: 20px;
@@ -32,6 +36,9 @@ header {
 
 header h1 {
     animation: showpage1 1s ease-in-out;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    /* Pour cet effet compact et moderne */
 }
 
 header img {
@@ -49,7 +56,6 @@ header img:hover {
 
 main {
     flex: 1;
-    color: white;
     font-size: larger;
     display: flex;
     flex-direction: column;
@@ -60,69 +66,83 @@ main {
 
 section.initiation p {
     margin-left: 20px;
-    color: white;
+    text-align: center;
+    color: rgba(7, 126, 90, 0.89);
     width: 90%;
+}
+
+main a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgba(7, 126, 90, 0.89);
+    box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
 }
 
 section.container {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    height: 330px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: green white;
+    scroll-snap-type: y mandatory;
+    grid-template-columns: repeat(2, 360px);
     justify-content: center;
     font-weight: bold;
-    gap: 40px;
+    column-gap: 80px;
+    row-gap: 40px;
 }
 
 section.container div {
     display: flex;
     flex-direction: column;
     font-size: 30px;
+    height: 300px;
+    padding: 10px;
+    scroll-snap-align: start;
     justify-self: center;
-    gap: 0;
+    border: solid 0.5px;
+    border-image-source: linear-gradient(to right, #ffffff, #2e5a4d);
+    border-image-slice: 1;
+    border-radius: 20px 100px 20px 100px;
 }
 
 div.item a {
     text-align: center;
+    width: 80%;
+    padding: 10px;
+    margin-top: -1px;
 }
 
 div.item p {
     visibility: visible;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: white;
-    background-color: rgba(73, 5, 150, 0.89);
-    box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
-    -webkit-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
-    -moz-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
+    color: rgba(7, 126, 90, 0.89);
     padding: 5px;
     border-radius: 0 20px;
     transition: visibility 200ms ease-in-out;
     animation: showpage1 1s ease-in-out;
 }
 
-div.item:hover>p {
-    visibility: hidden;
-}
-
 div.item img {
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    border: solid 0.3mm rgba(7, 126, 90, 0.89);
     object-fit: cover;
     border-radius: 50%;
-    transition: 800ms ease-in-out;
-    box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
+    box-shadow: -3px 12px 32px -14px rgba(53, 77, 128, 0.555);
     -webkit-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     -moz-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
 }
 
-div.item img:hover {
-    transform: scale(1.05) translateY(-5px);
-}
-
 div.item1 img {
-    height: 200px;
+    height: 100px;
     object-fit: contain;
-    width: 200px;
+    width: 100px;
     border-radius: 50% 50% 80% 50%;
     animation: showpage 1s ease-in-out;
 }
@@ -198,6 +218,7 @@ section.propos {
     width: 60%;
     text-align: center;
     font-weight: bold;
+    color: rgba(7, 126, 90, 0.89);
 }
 
 section.presentation img.aime {
@@ -221,7 +242,7 @@ div.social img:hover {
 
 footer {
     background-color: rgba(73, 5, 150, 0.664);
-    color: white;
+    color: rgba(7, 126, 90, 0.89);
     text-align: center;
     bottom: 0;
     padding: 10px 0;
