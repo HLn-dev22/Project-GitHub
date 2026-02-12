@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background: #ffffff;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ header {
     border-bottom: solid 0.5px;
     border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
     border-image-slice: 1;
-    color: rgba(7, 126, 90, 0.89);
+    color: #0D0F34;
     font-weight: bold;
     padding: 10px 0;
     margin-bottom: 20px;
@@ -67,7 +67,7 @@ main {
 section.initiation p {
     margin-left: 20px;
     text-align: center;
-    color: rgba(7, 126, 90, 0.89);
+    color: #0D0F34;
     width: 90%;
 }
 
@@ -76,7 +76,7 @@ main a {
     font-size: 16px;
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    background-color: rgba(7, 126, 90, 0.89);
+    background-color: #0D0F34;
     box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
 }
 
@@ -86,7 +86,7 @@ section.container {
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: green white;
+    scrollbar-color: rgb(2, 0, 128) rgba(255, 255, 255, 0);
     scroll-snap-type: y mandatory;
     grid-template-columns: repeat(2, 360px);
     justify-content: center;
@@ -106,7 +106,21 @@ section.container div {
     border: solid 0.5px;
     border-image-source: linear-gradient(to right, #ffffff, #2e5a4d);
     border-image-slice: 1;
+    animation: border_move 2s ease-in-out alternate;
+    animation-iteration-count: infinite;
     border-radius: 20px 100px 20px 100px;
+}
+
+@keyframes border_move {
+    0% {
+        border-image-source: linear-gradient(to right, #ffffff, #2e5a4d);
+        border-image-slice: 1;
+    }
+
+    100% {
+        border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
+        border-image-slice: 1;
+    }
 }
 
 div.item a {
@@ -129,20 +143,20 @@ div.item p {
 }
 
 div.item img {
-    height: 100px;
-    width: 100px;
-    border: solid 0.3mm rgba(7, 126, 90, 0.89);
+    height: 130px;
+    width: 130px;
+    border: solid 0.3mm #787ddb;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: -3px 12px 32px -14px rgba(53, 77, 128, 0.555);
+    box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     -webkit-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
     -moz-box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
 }
 
 div.item1 img {
-    height: 100px;
+    height: 120px;
     object-fit: contain;
-    width: 100px;
+    width: 120px;
     border-radius: 50% 50% 80% 50%;
     animation: showpage 1s ease-in-out;
 }
@@ -241,8 +255,10 @@ div.social img:hover {
 }
 
 footer {
-    background-color: rgba(73, 5, 150, 0.664);
-    color: rgba(7, 126, 90, 0.89);
+    border-top: solid 0.5px;
+    border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
+    border-image-slice: 1;
+    color: #0D0F34;
     text-align: center;
     bottom: 0;
     padding: 10px 0;
