@@ -11,14 +11,15 @@ html {
 }
 
 body {
-    background: #ffffff;
-    background-size: cover;
+    background-color: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     min-height: 100vh;
     display: flex;
+    position: relative;
     flex-direction: column;
+    z-index: 6;
 }
 
 header {
@@ -68,7 +69,7 @@ section.initiation p {
     margin-left: 20px;
     text-align: center;
     color: #0D0F34;
-    width: 90%;
+    width: 80%;
 }
 
 main a {
@@ -78,6 +79,17 @@ main a {
     border-radius: 20px;
     background-color: #0D0F34;
     box-shadow: -3px 12px 32px -14px rgba(0, 0, 0, 0.89);
+    transition: 500ms ease-out;
+}
+
+section.container div:hover {
+    box-shadow: -3px 12px 10px -10px rgba(0, 0, 0, 0.89);
+}
+
+main div.item a:hover {
+    transform: translateY(-4px);
+    background-color: #787ddb;
+    color: #0D0F34;
 }
 
 section.container {
@@ -103,12 +115,11 @@ section.container div {
     padding: 10px;
     scroll-snap-align: start;
     justify-self: center;
-    border: solid 0.5px;
-    border-image-source: linear-gradient(to right, #ffffff, #2e5a4d);
-    border-image-slice: 1;
-    animation: border_move 2s ease-in-out alternate;
+    background-color: #95C7EA;
     animation-iteration-count: infinite;
-    border-radius: 20px 100px 20px 100px;
+    border-radius: 20px;
+    transition-property: initial;
+    transition: 400ms ease-in;
 }
 
 @keyframes border_move {
@@ -135,7 +146,7 @@ div.item p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgba(7, 126, 90, 0.89);
+    color: rgb(25, 0, 255);
     padding: 5px;
     border-radius: 0 20px;
     transition: visibility 200ms ease-in-out;
@@ -263,6 +274,10 @@ footer {
     bottom: 0;
     padding: 10px 0;
     border-top-right-radius: 100px;
+}
+
+footer img {
+    width: 100px;
 }
 
 @keyframes showpage {
