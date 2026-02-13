@@ -19,27 +19,45 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    z-index: 6;
 }
 
 header {
-    display: flex;
-    text-align: center;
+
     border-bottom: solid 0.5px;
     border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
     border-image-slice: 1;
-    color: #0D0F34;
-    font-weight: bold;
     padding: 10px 0;
     margin-bottom: 20px;
     border-bottom-left-radius: 100px;
 }
 
-header h1 {
+header.en_tete {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 90%;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+main h1 {
+    text-align: left;
+    margin-left: 200px;
+    color: #95C7EA;
+    font-weight: bold;
     animation: showpage1 1s ease-in-out;
     font-weight: 800;
     letter-spacing: -0.02em;
+    font-size: 50px;
+    width: 400px;
     /* Pour cet effet compact et moderne */
+}
+
+.xt_1 {
+    animation: showpage1 800ms ease-in-out;
+}
+
+.xt_2 {
+    animation: showpage1 500ms ease-in-out;
 }
 
 header img {
@@ -72,7 +90,7 @@ section.initiation p {
     width: 80%;
 }
 
-main a {
+main section.container a {
     text-decoration: none;
     font-size: 16px;
     color: rgb(255, 255, 255);
@@ -83,7 +101,7 @@ main a {
 }
 
 section.container div:hover {
-    box-shadow: -3px 12px 10px -10px rgba(0, 0, 0, 0.89);
+    backdrop-filter: blur(10px);
 }
 
 main div.item a:hover {
@@ -94,7 +112,7 @@ main div.item a:hover {
 
 section.container {
     display: grid;
-    height: 330px;
+    height: 350px;
     overflow-y: scroll;
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -120,17 +138,18 @@ section.container div {
     border-radius: 20px;
     transition-property: initial;
     transition: 400ms ease-in;
+    animation: slide_move 500ms ease-in-out;
 }
 
-@keyframes border_move {
+@keyframes slide_move {
     0% {
-        border-image-source: linear-gradient(to right, #ffffff, #2e5a4d);
-        border-image-slice: 1;
+        opacity: 0;
+        transform: scale(0.9);
     }
 
     100% {
-        border-image-source: linear-gradient(to left, #ffffff, #2e5a4d);
-        border-image-slice: 1;
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -146,7 +165,7 @@ div.item p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: rgb(25, 0, 255);
+    color: #ffffff;
     padding: 5px;
     border-radius: 0 20px;
     transition: visibility 200ms ease-in-out;
@@ -176,40 +195,21 @@ div.item2 img {
     animation: showpage 900ms ease-in-out;
 }
 
-div.item3 img {
-    animation: showpage 800ms ease-in-out;
-}
-
-div.item4 img {
-    animation: showpage 700ms ease-in-out;
-}
-
-div.item5 img {
-    animation: showpage 600ms ease-in-out;
-}
-
-div.item6 img {
-    animation: showpage 500ms ease-in-out;
-}
-
-div.item7 img {
-    animation: showpage 400ms ease-in-out;
-}
-
-div.item8 img {
-    animation: showpage 300ms ease-in-out;
-}
-
-div.item9 img {
-    animation: showpage 200ms ease-in-out;
+main.main {
+    background-color: rgb(242, 247, 250);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-right: 20px;
+    justify-content: center;
 }
 
 section.presentation {
     display: grid;
-    grid-template-columns: 400px 200px;
+    position: relative;
+    grid-template-rows: 320px 200px;
     justify-content: center;
-    column-gap: 100px;
-    margin-top: 20px;
     color: white;
 }
 
@@ -224,26 +224,28 @@ section.presentation img.chris {
 section.presentation img {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: #95C7EA;
     border-radius: 10px;
     padding: 5px;
     animation: showpage 1s ease-in-out;
 }
 
 section.presentation img.im {
-    background-color: rgb(119, 85, 173);
+    background-color: #787ddb;
 }
 
-div.social {
-    grid-column: 2;
-    gap: 50px;
+div.contact a {
+    width: 20px;
 }
 
 section.propos {
     width: 60%;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    color: rgba(7, 126, 90, 0.89);
+    font-size: 30px;
+    border-left: solid 0.5px #787ddb;
+    padding-left: 20px;
+    color: rgba(139, 202, 238, 0.89);
 }
 
 section.presentation img.aime {
@@ -255,14 +257,21 @@ section.presentation img.aime {
     grid-row: 1/3;
 }
 
+div.contact {
+    display: flex;
+    margin-left: 9cm;
+    width: 50%;
+    flex-direction: row;
+}
+
 div.contact img,
 div.social img {
     transition: 600ms ease-in-out;
 }
 
-div.contact img:hover,
-div.social img:hover {
-    transform: translateY(2px);
+div.contact img:hover {
+    transform: translateY(-2px);
+    background-color: #95C7EA;
 }
 
 footer {
@@ -322,17 +331,27 @@ footer img {
         flex: 1;
     }
 
+    main.main {
+        flex-direction: column;
+    }
+
     section.initiation p {
-        color: white;
+        color: rgb(47, 41, 102);
         font-size: medium;
         width: 90%;
     }
 
     section.container {
-        display: grid;
-        grid-template-columns: repeat(2, 150px);
+        display: flex;
+        height: min-content;
+        flex-direction: column;
         justify-content: center;
         gap: 10px;
+    }
+
+    section.container div {
+        width: 70%;
+        height: auto;
     }
 
     div.item img {
