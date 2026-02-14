@@ -6,6 +6,7 @@
 
 html {
     scrollbar-width: thin;
+    width: 100%;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     /* ... reste de ton code ... */
@@ -48,6 +49,7 @@ main h1 {
     font-weight: 800;
     letter-spacing: -0.02em;
     font-size: 55px;
+    margin-top: -21px;
     filter: drop-shadow(2px 1px 6px black);
     /* Pour cet effet compact et moderne */
 }
@@ -81,6 +83,17 @@ main {
     gap: 30px;
     border-top-left-radius: 100px;
     margin-bottom: 20px;
+}
+
+main img.team {
+    position: absolute;
+    height: 200px;
+    object-fit: fill;
+    z-index: 1;
+    margin-left: 7cm;
+    margin-top: 7cm;
+    width: 200px;
+    filter: opacity(1);
 }
 
 main img.back {
@@ -124,7 +137,7 @@ main section.container a {
 }
 
 section.container div:hover {
-    backdrop-filter: blur(2);
+    background-color: #dee5ff;
 }
 
 main div.item a:hover {
@@ -161,7 +174,7 @@ section.container div {
     border-radius: 20px;
     transition-property: initial;
     transition: 400ms ease-in;
-    animation: slide_move 500ms ease-in-out;
+    animation: slide_move 500ms ease;
 }
 
 @keyframes slide_move {
@@ -188,7 +201,7 @@ div.item p {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: #ffffff;
+    color: #0D0F34;
     padding: 5px;
     border-radius: 0 20px;
     transition: visibility 200ms ease-in-out;
@@ -309,7 +322,27 @@ footer {
 }
 
 footer img {
-    width: 100px;
+    width: 150px;
+}
+
+footer div {
+    float: inline-start;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #0D0F34;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 5px;
+    margin-bottom: -11px;
 }
 
 @keyframes showpage {
