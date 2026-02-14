@@ -232,7 +232,7 @@ div.item2 img {
 }
 
 main.main {
-    background-color: rgb(242, 247, 250);
+    background-color: rgb(229, 238, 243);
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -335,21 +335,46 @@ footer {
 
 footer img {
     width: 150px;
+    margin-bottom: 15px;
 }
 
 footer div {
     float: inline-start;
     margin-left: 10px;
+    width: 90%;
     margin-bottom: 20px;
 }
 
-h3 {
-    color: #0D0F34;
+footer h3 {
+    color: #95C7EA;
+    position: relative;
     text-align: center;
+    font-weight: bolder;
+}
+
+footer h3::before {
+    content: ' ';
+    position: absolute;
+    width: 70px;
+    height: 1mm;
+    margin-top: 23px;
+    background: #0D0F34;
 }
 
 footer a {
     text-decoration: none;
+    color: #0D0F34;
+    transition: 600ms ease;
+}
+
+footer a:hover {
+    color: #95C7EA;
+}
+
+footer li {
+    color: #0D0F34;
+    text-align: left;
+    margin-left: 12.5cm;
 }
 
 footer p {
@@ -394,6 +419,11 @@ footer p {
     main h1 {
         font-size: 43px;
         margin-left: 20px;
+    }
+
+    header h1.nom {
+        font-size: 20px;
+        font-weight: bolder;
     }
 
     main img.team {
@@ -446,6 +476,12 @@ footer p {
         grid-row: auto;
     }
 
+    section.presentation img.felice {
+        object-fit: cover;
+        height: 300px;
+        width: 300px;
+    }
+
     div.contact {
         grid-column: auto;
         text-align: center;
@@ -453,14 +489,29 @@ footer p {
         margin-top: -33px;
     }
 
+    div.contact1 {
+        grid-column: auto;
+        text-align: center;
+        margin-left: 27%;
+    }
+
+
     section.propos {
         font-size: 19px;
         margin-top: -5cm;
         margin-bottom: 20px;
+        color: #2a2b31;
+        width: 70%;
     }
 
     div.social {
         grid-column: auto;
         text-align: center;
+    }
+
+    footer li {
+        text-align: left;
+        margin-top: 2px;
+        margin-left: 0;
     }
 }
