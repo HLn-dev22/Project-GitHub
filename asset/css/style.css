@@ -421,6 +421,11 @@ footer p {
         width: 290px;
     }
 
+    main.main {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
     main img.team {
         margin-left: 20px;
         margin-top: 6cm;
@@ -436,6 +441,12 @@ footer p {
         object-fit: cover;
         height: 300px;
         width: 300px;
+    }
+
+    div.contact {
+        margin-left: 26%;
+        gap: 5px;
+        margin-top: -54px;
     }
 }
 
@@ -502,11 +513,14 @@ footer p {
         row-gap: 50px;
     }
 
-    section.presentation img.chris,
-    section.presentation img.aime {
+    section.presentation img.chris {
         width: 60%;
         height: auto;
         grid-row: auto;
+    }
+
+    section.presentation img.aime {
+        height: 400px;
     }
 
     section.presentation img.felice {
@@ -526,13 +540,14 @@ footer p {
         grid-column: auto;
         text-align: center;
         margin-left: 27%;
+        color: #0D0F34;
     }
 
 
     section.propos {
         font-size: 19px;
         margin-top: -5cm;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         color: #2a2b31;
         width: 70%;
     }
