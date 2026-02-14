@@ -300,9 +300,21 @@ div.contact {
     flex-direction: row;
 }
 
+div.contact1 {
+    display: flex;
+    margin-left: 9cm;
+    width: 50%;
+    gap: 5px;
+    flex-direction: row;
+}
+
 div.contact img,
-div.social img {
+div.contact1 img {
     transition: 600ms ease-in-out;
+}
+
+div.contact1 img:hover {
+    transform: translateY(-2px);
 }
 
 div.contact img:hover {
@@ -369,7 +381,7 @@ footer p {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
     html {
         width: 100%;
     }
@@ -379,8 +391,15 @@ footer p {
         height: 100%;
     }
 
-    h1 {
-        font-size: 20px;
+    main h1 {
+        font-size: 43px;
+        margin-left: 20px;
+    }
+
+    main img.team {
+        height: 61px;
+        margin-top: 10cm;
+        margin-left: -1cm;
     }
 
     main {
@@ -430,6 +449,14 @@ footer p {
     div.contact {
         grid-column: auto;
         text-align: center;
+        margin-left: 27%;
+        margin-top: -33px;
+    }
+
+    section.propos {
+        font-size: 19px;
+        margin-top: -5cm;
+        margin-bottom: 20px;
     }
 
     div.social {
